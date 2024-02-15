@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #container{
+            
+            height:500px;
+            display:flex;
+            justify-content:space-around;
+            background-color: #F1F6FF;
+            
+            
+        }
+        h1{
+            
+            width:100%;
+            margin:auto;
+            margin-top:50px;
+            text-align: center;
+        }
+        #container>div{
+            
+            width:18%;
+            height:80%;
+            margin-top:50px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: white;
+            border-radius: 10px;
+            padding:10px;
+            
+            
+        }
+        div>img{
+            width:100%;
+            border-radius: 5px;
+        }
+        img+p{
+            color:#80A4EE
+        }
+        p+p:last-child{
+            color:#645E60;
+        }
+        
+        .b{
+            
+            width:100%;
+            height:70px;
+            text-align: center;
+            background-color: #F1F6FF;
+            
+            
+        }
+
+        .b>button{
+            border:1px solid red;
+            width:12%;
+            height:80%;
+            background-color: transparent;
+            border-radius: 5px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            color:red;
+            margin-bottom: 5px;
+        }
+
+        
+        #b2>div:last-child{
+            display: flex;
+            
+            justify-content: space-around;
+            
+        }
+        #container>div>p:nth-child(3){
+            font-weight: bold;
+            
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Masai In The News</h1>
+    <div id="container">
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ET_3754cc10ec.png" alt="Error">
+            <p>21 Dec 2021</p>
+            <p>Edtech startup Masai School
+                acquires data analytics firm
+                Prepleaf for $I million.</p>
+            <p>With their latest acquisition, Masai
+                moves one step closer to becoming...</p>
+        </div>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/money_Control_c3e25f5ceb.png" alt="Error">
+            <p>26 Oct 2021</p>
+            <p>Kunal Shah, Vijay Shekhar
+                Sharma, Amrish Rau among 21
+                angel investors in Masai School</p>
+            <p>Masai School is aiming to expand to 20
+                smaller cities by March 2022 and..</p>
+        </div>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/vccircle_6ef779c958.png" alt="Error">
+            <p>18 Aug 2020</p>
+            <p>Unitus Ventures leads pre-
+                Series A funding for coding-
+                focussed Masai School.</p>
+            <p>Software coding platform Masai School
+                has raised $2.5 million (Rs 18.6 crore) i..</p>
+        </div>
+    
+    </div>
+
+    <div class="b">
+        <button>SEE MORE ></button>
+    </div>
+
+    <div id="b2">
+        <div>
+            <h1>Our Investors,Who Believe In Us</h1>
+        </div>
+        <div>
+            <div>
+                <img src="https://www.masaischool.com/img/our-investors/unitus.svg" alt="Error">
+            </div>
+            <div>
+                <img src="https://www.masaischool.com/img/our-investors/omidyar.svg" alt="Error">
+            </div>
+            <div>
+                <img src="https://www.masaischool.com/img/our-investors/indiaQuotient.svg" alt="Error">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

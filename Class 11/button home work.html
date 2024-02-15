@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin-right:10px;
+            border:1px solid transparent;
+            width:100px;
+            height:50px;
+            border-radius:10px;
+        }
+    </style>
+
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+   // let names=["Primary","Success","Danger","warning","Info","Light","Dark","Link"];
+   // let colors=["blue","grey","green","red","yellow","cyan","white","black"]
+    
+   // we sholud use object insted of creating so many array for different thing
+   let btnObj={name:"Primary",bgColor:"blue",color:"white"}
+   //insted of normal object use object in array
+   let btnArr=[{name:"Primary", color:"white", bgColor:"#027BFF"},
+   {name:"Secondary", color:"white", bgColor:"#6D757D"},
+   {name:"Success", color:"white", bgColor:"#28A745"},
+   {name:"Danger", color:"white", bgColor:"#DC3445"},
+   {name:"Warning", color:"black", bgColor:"#FFC007"},
+   {name:"Info", color:"white", bgColor:"#12A3B8"},
+   {name:"Light", color:"black", bgColor:"#F8FAFA"},
+   {name:"Dark", color:"white", bgColor:"#343941"},
+   {name:"Link", color:"#4098FE", bgColor:"#FFFFFF"},] 
+
+
+    //hof --> forEach,map
+    /*let arrObj=[{phone:"iphone", model:"11 pro"},
+    {phone:"iphone", model:"11 pro"},];
+
+    phones.forEach(function(element,index,arr){
+        console.log(element);
+    })*/
+
+    
+    btnArr.forEach(function(element/*,index,arr*/){
+        console.log(element.name, element.bgColor);
+        let btn=document.createElement("button");
+        btn.innerText=element.name;
+        btn.style.backgroundColor=element.bgColor;
+        btn.style.color=element.color;
+        document.querySelector("body").append(btn);
+    })
+
+    
+</script>

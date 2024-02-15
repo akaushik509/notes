@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnClick - event for button</title>
+</head>
+<body>
+    <!-- 1. All HTML code is  known as DOCUMENT  
+        2. loding in brower any web page it will considered as OBJECT
+        3. Presentation will be created which is known as DOM
+        4. Document is an object
+        5. onClick (button)  -->
+    <h1>I am heading</h1>
+    <p>I am para</p>
+    <button onClick="buttonfunction()"> SIgn up </button>
+    <div onClick="boxclick()">I am a box</div>
+</body>
+</html>
+
+
+
+<!--java script file-->
+<script>
+    console.log("check me in console section of inspect");
+    console.log(document);
+    console.log(document.URL);
+    console.log(document.title);
+    console.log(document.body);
+
+    function buttonfunction(){
+        console.log("signup success");
+    }
+    
+    let count=0;
+    function boxclick(){
+        console.log("some one clicked me");
+        console.log(count);
+    }
+
+    /* print  url of the page */
+</script>

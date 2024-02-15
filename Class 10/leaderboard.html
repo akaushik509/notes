@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            border:1px solid red;
+            width:60%;
+            height:100px;
+            margin:auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,100px);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #main>div{
+            border:1px solid blue;
+            width:50%;
+            height:100%;
+            margin:auto;
+        }
+        #m{
+            border:1px solid black;
+            width:60%;
+            margin:auto;
+            display:flex;
+            justify-content: space-around;
+        }
+
+        #s{
+            border:1px solid black;
+            width:60%;
+            margin:auto;
+            display:flex;
+            justify-content: space-around;
+        }
+        #dis{
+            border:1px solid black;
+            width:30%;
+            height:100px;
+            margin:auto;
+            display:flex;
+            justify-content: space-around;
+        }
+
+        #k{
+            border:1px solid black;
+            width:30%;
+            height:400px;
+            margin:auto;
+            margin-top:20px;
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3, 80px);
+            gap:20px;
+            
+        }
+        #k>div{
+            border:1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        
+
+        #e{
+            border:1px solid black;
+            width:30%;
+            height:80px;
+            margin:auto;
+            margin-top:20px;
+            display:flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div></div>
+        <div></div>
+    </div>
+    <div id ="m">
+        <h1>MIN</h1>
+        <h1>MAX</h1>
+    </div>
+
+    <div id="s">
+        <h1>SCORE</h1>
+    </div>
+    
+    
+    <div id="dis">
+
+    </div>
+    
+    <div id="k">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>0</div>
+    </div>
+    
+
+    <div id="e">
+        <h1>ENTER</h1>
+    </div>
+</body>
+</html>

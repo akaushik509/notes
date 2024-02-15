@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* This will use to remove bydefault space from left and right*/
+            margin:0px;
+            padding:0px;
+            
+        }
+
+        .nav{
+            height:80px;
+           /* width:80%;*/
+            margin:auto;
+            border: 1px solid red;
+            box-shadow: 3px 3px 3px 3px red;  /* shadow under box */
+            display: flex;
+            margin:center;
+            justify-content: space-between;
+            padding:0px 10%;
+        }
+
+        .nav > div{
+            border:1px solid blue;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            align-items: center;
+        }
+
+        .nav>div:nth-child(2){
+            border:1px solid red;
+            width:50%;
+            justify-content: space-between;
+            
+        }
+        
+        .nav>div:nth-child(1){
+            border:1px solid red;
+            background-color: blue;
+            height:100%;
+            color:white;
+            padding:0px 15px;
+            
+        }
+
+        .nav>div:nth-child(2)>h2:hover{
+            cursor: pointer;
+            color:orangered;
+            
+        }
+
+        /*Main CSS*/
+        .main{
+            margin-top:50px;
+            display:flex;
+            width:90%;
+            margin-inline:auto;
+            justify-content: space-between;
+        }
+
+        .main>div{
+            width:45%;
+            justify-content: space-between;
+
+        }
+        /*Left portion*/
+        .main>div:nth-child(1)>h4{
+            color: #1e88e5;
+            margin-bottom: 10px;
+        }
+
+        .main>div:nth-child(1)>h1{
+            font-size:45px;
+            margin-bottom:30px;
+        }
+
+        .main>div:nth-child(1)>p{
+            font-size:20px;
+            line-height: 25px;
+            margin-top: 10px;
+        }
+
+        /*Right portion*/
+        .main>div:nth-child(2){
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .main>div:nth-child(2)>div{
+            
+            width:45%;
+        }
+        .main>div:nth-child(2)>div>img{
+            
+            width:100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="nav"><!-- top navigation bar there are 2 box inside a parent box 
+        We should use display flex for .nav for div1(study lab) and div2(menu)-->
+        <div><!-- 1st box for h1-->
+            <h1>Study Lab</h1>
+        </div>
+        <div><!-- this will used for menu
+        we sholud use display flex because there are 6 h1 are available -->
+            <h2>Home</h2>
+            <h2>About</h2>
+            <h2>Courses</h2>
+            <h2>Instructor</h2>
+            <h2>Blog</h2>
+            <h2>Contact</h2>
+        </div>
+    </div>
+    <div class="main"><!-- This is for bottom section -->
+        <div>
+            <h4>WELCOME TO STUDYLAB</h4>
+            <h1> We are studylab an online learning center</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsam ab aliquid aspernatur beatae eaque consectetur ut odio, fugiat molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsam ab aliquid aspernatur beatae eaque consectetur ut odio, fugiat molestiae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsam ab aliquid aspernatur beatae eaque consectetur ut odio, fugiat molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsam ab aliquid aspernatur beatae eaque consectetur ut odio, fugiat molestiae.</p>
+        </div>
+        <div>
+            <div>
+                <img src="https://techbiote.com/wp-content/uploads/2022/05/Best-Home-Theater-Under-10000-1-min-300x169.png" alt="Error">
+                <h2>TOp Quality Content</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quae?</p>
+            </div>
+            <div>
+                <img src="https://techbiote.com/wp-content/uploads/2022/05/Best-Home-Theater-Under-10000-1-min-300x169.png" alt="Error">
+                <h2>TOp Quality Content</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quae?</p>
+            </div>
+            <div>
+                <img src="https://techbiote.com/wp-content/uploads/2022/05/Best-Home-Theater-Under-10000-1-min-300x169.png" alt="Error">
+                <h2>TOp Quality Content</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quae?</p>
+            </div>
+            <div>
+                <img src="https://techbiote.com/wp-content/uploads/2022/05/Best-Home-Theater-Under-10000-1-min-300x169.png" alt="Error">
+                <h2>TOp Quality Content</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quae?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

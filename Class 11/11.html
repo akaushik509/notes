@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin-right:10px;
+        }
+    </style>
+
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+   // let names=["Primary","Success","Danger","warning","Info","Light","Dark","Link"];
+   // let colors=["blue","grey","green","red","yellow","cyan","white","black"]
+    
+   // we sholud use object insted of creating so many array for different thing
+   let btnObj={name:"Primary",bgColor:"blue",color:"white"}
+   //insted of normal object use object in array
+   let btnArr=[{name:"Primary", color:"white", bgColor:"blue"},
+   {name:"Success", color:"white", bgColor:"orange"},
+   {name:"Danger", color:"white", bgColor:"red"},
+   {name:"Primary", color:"white", bgColor:"pink"},
+   {name:"Primary", color:"blue", bgColor:"yellow"},
+   {name:"Primary", color:"white", bgColor:"black"},
+   {name:"Primary", color:"white", bgColor:"red"},] 
+
+
+    //hof --> forEach,map
+    for(let i=0;i<btnArr.length;i++)
+    {
+        let btn=document.createElement("button");
+        btn.innerText=btnArr[i].name;
+        btn.style.backgroundColor=btnArr[i].bgColor;
+        btn.style.color=btnArr[i].color;
+        document.querySelector("body").append(btn);
+    }
+    
+</script>

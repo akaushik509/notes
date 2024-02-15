@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>target</title>
+    <style>
+        #container{
+            display:grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: 100px;
+            gap:20px;
+            background-color: pink;
+            padding:20px;
+        }
+        #container > div{
+            background-color: teal;
+            font-size:40px;
+            display:grid;
+            justify-content: center;
+            align-items:center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
+
+<script>
+    var box= document.querySelectorAll("#container>div");
+
+    for(let i=0;i<box.length;i++)
+    {
+        box[i].addEventListener("click", displayNumber)
+
+    }
+
+    function displayNumber(event){
+        console.log(event.target.innerText);
+    }
+
+</script>

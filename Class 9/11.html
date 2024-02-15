@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>value</title>
+</head>
+<body>
+    <input id ="mbl" type="number" placeholder="Mobile Number" >
+    <input type="text" placeholder="Enter Name" value="Avinash">
+
+
+    <input id ="name" type="text" placeholder="Enter Name" value="">
+
+
+    <button onClick="signUp()">Signup</button>
+</body>
+</html>
+
+<script>
+    function signUp(){
+        var name= document.getElementById("name").value;
+        var mobile=document.getElementById("mbl").value;
+        console.log(name,mobile);
+    }
+
+   
+</script>

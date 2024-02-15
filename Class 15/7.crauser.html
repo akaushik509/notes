@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+        }
+        .caruser{
+            width:100%;
+            position: relative;
+            margin-top:20px;
+        }
+        .caruser>img{
+            width:100%;
+        }
+        .caruser>button{
+           position:absolute;
+           top:150px;
+           background-color: red;
+           border-radius: 100%;
+           font-size: 20px;
+           color:white;
+           width:50px;
+           height: 50px;
+        }
+        button:nth-child(2){
+           
+            left:10px;
+        }
+        button:nth-child(3){
+            right:10px;
+           
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="caruser">
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2Fyc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60" alt="">
+        <button><</button>
+        <button>></button>
+    </div>
+</body>
+</html>
+
+<script>
+    let img=document.querySelector("img");
+    let buttons = document.querySelectorAll("button");
+    let imgNum=0;
+    let image=[
+    "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2Fyc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fyc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2Fyc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1588258219511-64eb629cb833?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNhcnN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+    ];
+    buttons[0].addEventListener("click", function(){
+        if(imgNum===0){
+            imgNum=image.length-1;
+        }else{
+            imgNum--;
+        }
+        img.src=image[imgNum];
+    })
+
+    buttons[1].addEventListener("click",function(){
+        if(imgNum===image.length-1){
+            imgNum=0;
+        }else{
+            imgNum++;
+        }
+        img.src=image[imgNum];
+    })
+
+</script>
+
+<!-- 
+ -->

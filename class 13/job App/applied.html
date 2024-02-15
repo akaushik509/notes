@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database</title>
+    <link rel="stylesheet" href="commonStyles.css" />
+    <style>
+      tbody > tr > td:last-child {
+        background-color: red;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="applied.html">Applied Jobs</a></div>
+      <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+
+    <select id="sortNames" onChange="handleNameSort()">
+      <option value="">Sort By Name</option>
+      <option value="Ascending">Ascending</option>
+      <option value="Descending">Descending</option>
+      <option value="Salary">Salary</option>
+    </select>
+
+    <select id="filter">
+      <option value="">Filter By role</option>
+      <option value="Backend">Backend</option>
+      <option value="FSD">FSD</option>
+    </select>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Job applied</th>
+            <th>Salary expected</th>
+            <th>Add to bookmark</th>
+          </tr>
+        </thead>
+        <tbody id="body">
+          <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+    </main>
+  </body>
+
+  <script>
+    function handleNameSort() {
+      let selected = document.querySelector("#sortNames").value;
+      if (selected == "Ascending") {
+        arrFromLS.sort(function (a, b) {
+          if (a.personName > b.personName) return 1;
+          if (a.personName < b.personName) return -1;
+          return 0;
+        });
+        displayTable(arrFromLS);
+      }
+      if (selected == "Descending") {
+        arrFromLS.sort(function (a, b) {
+          if (a.personName > b.personName) return -1;
+          if (a.personName < b.personName) return 1;
+          return 0;
+        });
+      }
+      displayTable(arrFromLS);
+
+      if (selected == "Salary") {
+        arrFromLS.sort(function (a, b) {
+          return a.personSalary - b.personSalary;
+        });
+      }
+      displayTable(arrFromLS);
+    }
+
+    //you need to code here
+    /*18.*/ //catching data from local storagae
+    let arrFromLS = JSON.parse(localStorage.getItem("jobData"));
+    document.querySelector("#filter").addEventListener("change", handleFilter);
+
+    function handleFilter() {
+      let selected = document.querySelector("#filter").value;
+      let filteredList = arrFromLS.filter(function (el) {
+        return el.personRole == selected;
+      });
+      displayTable(filteredList);
+    }
+    //console.log(arrFromLS);
+
+    //34.
+    //let bookMarkArr=[];
+
+    //37.
+    let bookMarkArr = JSON.parse(localStorage.getItem("bookMark")) || [];
+    /*19.*/ //I neeed to create atable
+
+    /*20.*/ //calling a function to crreate a table
+    displayTable(arrFromLS);
+
+    //21. creating that function
+    function displayTable(arrFromLS) {
+      document.querySelector("tbody").innerHTML = "";
+      //22.for each data I have to make that many of colummn
+      arrFromLS.forEach(function (el) {
+        //23. creating row
+        let tr = document.createElement("tr");
+
+        //24. creating column
+        let td1 = document.createElement("td");
+        td1.innerText = el.personName;
+        let td2 = document.createElement("td");
+        td2.innerText = el.personEmail;
+        let td3 = document.createElement("td");
+        td3.innerText = el.personRole;
+        let td4 = document.createElement("td");
+        td4.innerText = el.personSalary;
+        let td5 = document.createElement("td");
+        td5.innerText = "Bookmark";
+
+        //29
+        //td5.addEventListener("click",bookmarkFun);
+
+        //31.
+        td5.addEventListener("click", function () {
+          bookmarkFun(el);
+        });
+
+        //25. append all table in tbody
+        tr.append(td1, td2, td3, td4, td5);
+        document.querySelector("tbody").append(tr);
+        //26. refresh your this page
+
+        //27. whenever we click on bookmark then our entire row should go into bookmark page
+        //28. for that we add eventlistner to bookmark menas td5
+      });
+    }
+
+    //30.
+    //   function bookmarkFun(){
+    //   console.log(event.target.parentNode);
+    //check result in console we have to remove the result from aplied to bookmark page, result is an element so this is in object so we have to convert .....here this will not work
+    //}
+
+    //32.   78->79->102->103
+    function bookmarkFun(el) {
+      //console.log(el);
+      //check result
+      //33. bnow I have to push these data in empty array
+      //35.
+      bookMarkArr.push(el);
+      console.log(bookMarkArr);
+
+      localStorage.setItem("bookMarkData", JSON.stringify(bookMarkArr));
+
+      //36. now go to local storage check bookmarkdata in that
+    }
+
+    //39 in bookmark.html page
+  </script>
+</html>

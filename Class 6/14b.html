@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #c{
+            background-color:bisque ;
+            padding:20px;
+
+            /*=-----------*/
+            /*let suppose we have so many box then is it possible to provide every one width and height in 
+            grid-template-columns and -rows?*/
+
+            /*here we will use repeat function   repeat(no. of time,size)*/
+        
+            display: grid;
+
+            /*we can also use fraction in place of row col height width*/
+            grid-template-columns: repeat(3,1fr);/*3 cols and with there width*/
+            grid-template-rows: repeat(3,100px);/* 2 rows and there represent height of the row*/
+            
+            /*we cant use 1fr in rows bcz height is not fix here */
+            
+            
+
+            /*How to give gap betn box*/
+            /*for gap we will use gap properties*/
+            gap:10px; /* gap btn box with row-gap and col-gap*/
+            /*for equal gap betn row and col use gap:10px;*/
+
+             /*Now it time to change the place of box this will happen by using 
+            "grid-area:row-start/col-start/row-end/col-end" */
+
+            /*but this process is very difficult we will see grid value by unique name in next page*/
+        
+        }
+            
+        #c>div{
+           /* padding:30px;/*we can remove padding from here no sence of padding here*/
+            font-size: 40px;
+            border:4px solid black;
+            /*display:flex; /*to use flex property*/  
+            /*NOTE:- FLEX PROPERTY ALSO USED IN GRID THEREFORE WE CAN USE GRID INSTED OF FLEX)*/
+            
+            display:grid;
+            justify-content: center;
+            align-items: center;
+
+           }
+        #c>div:nth-child(1){
+            background-color: blue;
+        }
+        #c>div:nth-child(2){
+            background-color: green;
+           /* grid-area:1/2/2/3 /* No change because its old value */
+        }
+        #c>div:nth-child(3){
+            background-color: yellow;
+            grid-area:1/2/2/3 /*change happens new value*/
+        }
+        #c>div:nth-child(4){
+            background-color: red; 
+        }
+        #c>div:nth-child(5){
+            background-color: brown;
+        }
+        #c>div:nth-child(6){
+            background-color: pink; 
+        }
+    </style>
+</head>
+<body>
+    <div id="c">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

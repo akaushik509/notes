@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Store array</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let nums=[1,2,3,4,5];
+    nums=JSON.stringify(nums);
+
+    localStorage.setItem("arrOfNum",nums);
+    //we can directly use nums=JSON.stringify(nums); in place of nums in abovfe
+
+    //let getArr = localStorage.getItem("arrOfNum");
+    //console.log(typeof getArr)  //outpuut = "1,2,3,4,5" which is string
+
+    //but we want to display like array
+
+    //for that we will ise JSON -universa; data format
+    //backend - send data in form of JSON
+    //frontend - accept JSON
+    // JSON vs object
+
+    //object
+    //let students={student1:"avinash", student2:"sanjay"};
+
+    //JSON
+    //let studentJSON={"student1":"avinash", "student2":"kaushik"};
+    //JSON.stringify()
+    //line16
+</script>

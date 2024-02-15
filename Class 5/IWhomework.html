@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            /*border:1px solid red;*/
+            width:20%;
+            text-align: center;
+            margin:auto;
+
+        }
+        #container{
+            /*border:1px solid red;*/
+            width:70%;
+            margin:auto;
+            display:flex;
+            background-color: #f6ebe6;
+            margin-top:50px;
+            justify-content: space-evenly; /*inplace of margin auto for all div*/
+            padding:80px 20px;
+            border-radius: 20px;
+            
+            
+        }
+
+        #container>div{
+            /*border:1px solid red;*/
+            /*width:15%;*/
+            /*height:150px;*/
+            font-size:20px;
+            /*text-align: center;*/
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /*margin:50px 0px 50px 0px;*/
+            background-color: white;
+            border-radius: 10px;
+            padding:10px;
+            font-weight: bold;
+            
+        }
+
+        #container>div>p:nth-child(1){
+            background-color: #f6ebe6;
+            font-size: 20px;
+            /*margin:auto;*/
+            /*margin-top:10px;*/
+            padding:10px 15px; /*10px = top and bottom , 15px = left and right*/
+            border-radius: 5px;
+        }
+
+        
+        #container>div>p:nth-child(2){
+            width:80%;
+            margin:auto;
+            /*border:1px solid blue;*/
+            text-align: center;
+            margin-bottom: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Ready To Realze Your Career Potential</h1>
+    <div id="container">
+        <div>
+            <p>1</p>
+            <p>Apply For Program</p>
+        </div>
+        <div>
+            <p>2</p>
+            <p>Apply For Program</p>
+        </div>
+        <div>
+            <p>3</p>
+            <p>Apply For Program</p>
+        </div>
+        <div>
+            <p>4</p>
+            <p>Apply For Program</p>
+        </div>
+        <div>
+            <p>5</p>
+            <p>Apply For Program</p>
+        </div>
+    </div>
+</body>
+</html>

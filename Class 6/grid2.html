@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #c{
+            
+            padding:20px;
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);/*3 cols and with there width*/
+            grid-template-rows: repeat(2,100px);/* 2 rows and there represent height of the row*/
+            
+            gap:10px;
+
+            grid-template-areas:
+            "a a b e"
+            "c d b e";
+        }
+            
+        #c>div{
+            font-size: 40px;
+            
+            display:grid;
+            padding-left:10px;
+             
+            border-radius: 10px;;       
+        }
+        #c>div:nth-child(1){
+            background-color: gray;
+            grid-area:a;
+        }
+        #c>div:nth-child(2){
+            background-color: gray;
+            grid-area:b;
+        }
+        #c>div:nth-child(3){
+            background-color: gray;
+            grid-area:c;
+        }
+        #c>div:nth-child(4){
+            background-color: gray; 
+            grid-area:d;
+        }
+        #c>div:nth-child(5){
+            background-color: gray;
+            grid-area:e;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="c">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        
+    </div>
+</body>
+</html>

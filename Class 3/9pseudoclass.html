@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: red;
+            border:none;
+
+        }
+
+        /*Pseudo class*/
+        /* tagName:prperty{
+
+        }*/
+
+        button:hover {
+            background-color: teal;
+            color:blue;
+            font-size:30px;
+        }
+
+        /* nth-child(n) */
+        div > p:nth-child(5) {
+            color:red;
+        }
+        div > p:nth-child(6), div > p:nth-child(7), div > p:nth-child(8) {
+            color:red;
+        }
+        div > p:first-child {
+            color:blue;
+        }
+        div > p:last-child {
+            color:blue;
+        }
+
+        /*pseudo element*/
+        /*tag_name::propertry{
+
+        }*/
+
+        p::after{
+            content:"lili"
+        }
+    </style>
+</head>
+<body>
+    <button>MArk as completed</button>
+
+    <div>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <p>p4</p>
+        <p>p5</p>
+        <p>p6</p>
+        <p>p7</p>
+        <p>p8</p>
+        <p>p9</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa enim distinctio blanditiis ex, odio, dolorum, fuga repudiandae minima quibusdam similique at. Ad ratione nihil unde inventore harum. Dignissimos, cupiditate veritatis!</p>
+</body>
+</html>

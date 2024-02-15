@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #c{
+            background-color:bisque ;
+            padding:20px;
+
+            /*=-----------*/
+            /*let suppose we have so many box then is it possible to provide every one width and height in 
+            grid-template-columns and -rows?*/
+
+            /*here we will use repeat function   repeat(no. of time,size)*/
+        
+            display: grid;
+            grid-template-columns: repeat(3,100px);/*3 cols and with there width*/
+            grid-template-rows: repeat(2,100px);/* 2 rows and there represent height of the row*/
+            
+            
+
+            /*How to give gap betn box*/
+            /*for gap we will use gap properties*/
+            gap:10px; /* gap btn box with row-gap and col-gap*/
+            /*for equal gap betn row and col use gap:10px;*/
+        }
+            
+        #c>div{
+            padding:30px;
+            font-size: 40px;
+        }
+        #c>div:nth-child(1){
+            background-color: blue;
+        }
+        #c>div:nth-child(2){
+            background-color: green;
+        }
+        #c>div:nth-child(3){
+            background-color: pink;
+        }
+        #c>div:nth-child(4){
+            background-color: red; 
+        }
+        #c>div:nth-child(5){
+            background-color: white;
+        }
+        #c>div:nth-child(6){
+            background-color: green; 
+        }
+    </style>
+</head>
+<body>
+    <div id="c">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

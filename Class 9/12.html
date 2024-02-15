@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>value</title>
+</head>
+<body>
+    <input id ="mbl" type="number" placeholder="Mobile Number" >
+    <input type="text" placeholder="Enter Name" value="Avinash">
+
+
+    <input id ="name" type="text" placeholder="Enter Name" value="">
+
+
+    <button onClick="signUp()">Signup</button>
+    <h1 id="nameDisplay">Display name here</h1>
+    <h2 id = "mblDisplay"> Display Mobile Nnumber</h2>
+</body>
+</html>
+
+<script>
+    function signUp(){
+        var name= document.getElementById("name").value;
+        var mobile=document.getElementById("mbl").value;
+
+        document.getElementById("nameDisplay").innerText=name;
+        document.getElementById("mblDisplay").innerText=mobile;
+        //console.log(name,mobile);
+    }
+
+   
+</script>

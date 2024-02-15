@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="masai">Masai School</h1>
+    <h2 class="main">Main block</h2>
+    <p>kaushik</p>
+    <p>Avinash</p>
+    <h2 class="abc">Anil kumar</h2>
+</body>
+</html>
+
+<script>
+    //getElementById
+    let x=document.getElementById("masai");
+    x.style.backgroundColor="red";
+
+    //getElementByClassName
+    let y=document.getElementsByClassName("abc")
+    for(let i=0;i<y.length;i++)
+    {
+        y[i].style.backgroundColor="pink";
+    }
+
+    //getElementsByTagName
+    let z=document.getElementsByTagName("p")
+    for(let i=0;i<z.length;i++)
+    {
+        z[i].style.backgroundColor="teal";
+    }
+
+
+</script>

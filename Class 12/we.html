@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input id="nam" type="text" placeholder="Enter Name"><br>
+        <input id="age" type="number" placeholder="Enter your age"><br>
+
+        <select id="gender">
+            <option id="male">
+                Male
+            </option>
+            <option id="female">
+                Female
+            </option>
+        </select><br>
+        <input id="email" type="email" placeholder="Enter your E-Mail Id"><br>
+        <input id="mbl" type="number" placeholder="Enter Your Mobile Number"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",myfun);
+
+    let arr=[];
+    function myfun(event){
+        event.preventDefault();
+
+        let obj={
+            Oname:document.querySelector("#nam").value,
+            Oage:document.querySelector("#age").value,
+            Ogender:document.querySelector("#gender").value,
+            Oemail:document.querySelector("#email").value,
+            Omobile:document.querySelector("#mbl").value,
+        };
+
+        arr.push(obj);
+        nums=JSON.stringify(arr);
+
+        localStorage.setItem("details",nums);
+
+        let getDetail=localStorage.getItem("details");
+
+        console.log(JSON.parse(getDetail))
+
+    }
+</script>

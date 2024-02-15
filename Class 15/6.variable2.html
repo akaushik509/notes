@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /*  declare variable  */
+
+        :root{
+            /* CSS Variable always must start with --  */
+            --background-color:red; 
+        }
+        .box{
+            width:100%;
+            height:100px;
+            margin-top:20px;
+            /*here we are useing bg color thats why var(--bg ) used*/
+            background-color:var(--background-color);
+        }
+        .box2{
+            /*Redeclaring bg color*/
+            --background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+    <div class="box box2"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>
+
+<script>
+      console.log("I am Avinash");
+    console.log("I am Shalini");
+    console.log("I am Raj");
+
+    /*<!-- here above I am is repeted 3 time but I dont want to repeate I am all time-->*/
+
+    var repeat ="I am ";
+    console.log(repeat+"Ankit");
+    console.log(repeat+"Anil");
+    console.log(repeat+"Anita");
+</script>

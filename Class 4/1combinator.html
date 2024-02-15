@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*descendant selector can use multiple selector*/
+        div p{
+            /*It will select all p's which are descendant of div*/
+            background-color: teal;
+        }
+        #container p{
+            /*it will select all p's which are descendant of div with id container*/
+            background-color: red;
+        }
+        #container span h1{
+            /*it will select all h1's which are descendant of div with id container*/
+            /*span h1{
+                same as #container span h1{}
+            }*/
+            background-color: blue;;
+        }
+    </style>
+</head>
+<body>
+    <!-- There are 4 types of combinator
+        1. descendant selector - space
+        2. child selector - >
+        3. general sibling selector - ~
+        4. adjacent sibling selector - +
+    -->
+
+    <!-- 1. descendeant selector senoted by space-->
+    
+     <div>
+         <p>para 1 in the div</p>
+         <p>para 2 in the div</p>
+         <p>para 3 in the div</p>
+         <p>para 4 in the div</p>
+         <span>
+             <p>I am p9 inside span which is inside div, tis is also descendant of div</p>
+         </span>
+    </div>
+    
+        <p>para 5 is not descendant of div</p>
+        <p>para 6 is not descendant of div</p>
+        <p>para 7 is not descendant of div</p>
+        <p>para 8 is not descendant of div</p>
+        <!-- ---------------------- -->
+        <div id = "container">
+            <p>para 1 in the div</p>
+            <p>para 2 in the div</p>
+            <p>para 3 in the div</p>
+            <p>para 4 in the div</p>
+            <span>
+                <p>I am p9 inside span which is inside div, tis is also descendant of div</p>
+                <h1>I am heading</h1>
+            </span>
+            <div>
+                <div>
+                    <div>
+                        <p>para 9 i am also descendant of id container</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+       
+           <p>para 5 is not descendant of div</p>
+           <p>para 6 is not descendant of div</p>
+           <p>para 7 is not descendant of div</p>
+           <p>para 8 is not descendant of div</p>
+       
+</body></html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+<body>
+    <p id="para">I am para</p>
+    <div id="box">I am box</div>
+    <h1 id="head">I am Heading</h1>
+</body>
+</html>
+<!-- to catch element by using ID -->
+
+<script>
+    //getElementById("id_name")
+
+    var x = document.getElementById("para").innerText
+    console.log(x)
+    //output=I am para
+
+    let y= document.getElementById("box").innerText
+    console.log(y)
+
+    let z= document.getElementById("head").innerText
+    console.log(z)
+</script>

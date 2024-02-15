@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS</title>
+</head>
+<body>
+    <!-- color CSS -->
+
+    <h1 style="color:red;">Hello Avinash</h1>
+    <!-- If we want to apply any CSS then we will start from [style="property name:value;"]-->
+    <!-- There are three ways of writtinf colors 
+    1. by name of the color
+    2. RGB values
+    3. Hexa code -->
+    
+    <!-- syntax using RGB [style="property:rgb(number1,number2,nnumber3);"]   number should be betn 0 to 255-->
+    <h1 style="color:rgb(220,50,70);">Hello Avinash</h1>
+
+    <!-- Hexa Syntax [style="color:#HEXACODE;"]-->
+    <h1 style="color:#EEEEEE;">Hello Avinash</h1>
+        -------------------------------------------------------------------------
+    <!-- Background Color -->
+    <h1 style="background-color:red;">Hello ddAvinash</h1>
+    <h1 style="background-color:red;color:#EEEEEE;">Hello Avinash</h1>
+        -------------------------------------------------------------------------
+    <!-- Font Size and Pixels -->
+    <h1>Avinash kaushik</h1>
+    <p style="font-size:10px;">I am paragrraph</p>
+    <!-- Default value of p tag is 16px-->
+        ------------------------------------------------------------------------------
+    <!-- Bold -->
+    <p style="font-size:10px; font-weight: bold;">I am paragrraph</p>
+        -----------------------------------------------------------------
+    <!-- Alignment -->
+    <h1 style="text-align: left;">Hello Avinash Kaushik</h1>
+    <h1 style="text-align: center;">Hello Avinash Kaushik</h1>
+    <h1 style="text-align: right;">Hello Avinash Kaushik</h1>
+    <p style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit
+        . Impedit odio fuga omnis, recusandae perferendis itaque esse
+         alias voluptates quos eligendi eaque aliquid commodi quibusdam
+          natus eveniet autem sunt quis. Quam.</p>
+    
+
+        ---------------------------------------------------------------------------------------------
+    <!-- Box Model -->
+    <div style="width:200px; height:200px; border:1px solid red"></div>
+    <!-- Above will make a box -->
+    <div style="width:200px; height:200px; border:1px crashed red"></div>
+    <!-- dotted box -->
+    ------------------------------------------------------------------------------
+    <!-- IN html there are 2 types of element or tags
+    1. inline (input,button) note inline elemnt only occupy own width
+    2. Block(p,h1-h6,div)   note block element occupy full width-->    
+    <p>Lorem, ipsum dolor sit
+     amet consectetur adipisicing elit.</p><p> Blanditiis, facilis!</p>
+     <input type="text">
+     <button>submit</button>
+     <button style="background-color:green;">submit</button>
+    -----------------------------------------------------------------
+
+    <div style="width:400px; height:400px;background-color:gray;">
+        <div style="width:400px; height:400px;background-color:red;"></div>
+    </div>
+    ---------------------------------------------------------------------------------------------
+
+    <!-- Padding -->
+    <!-- 4 types of padding (space btn border and house inside the border(content))
+        1. padding-left
+        2. padding-right
+        3. padding-top
+        4. padding-bottom-->
+        <div style="width:400px; height:400px;background-color:gray; padding-left:20px;
+        padding-top: 20px;">
+            <div style="width:400px; height:400px;background-color:red;">House</div>
+        </div>
+    -------------------------------------------------------------------------
+        <!-- 4 types of margin (space btn two border)
+        1. margin-left
+        2. margin-right
+        3. margin-top
+        4. margin-bottom-->
+        <div style="width:400px; height:400px;background-color:gray; padding-left:20px;
+        padding-top: 20px; margin-top: 20px;">
+            <div style="width:400px; height:400px;background-color:red;">House22</div>
+        </div>
+        <!-- 4 properties of box model
+            1. padding
+            2. margin
+            3. content
+            4. border -->
+        <!-- another way to define margin and padding -->
+        <div style="width:400px; height:400px;background-color:gray; padding-left:20px;
+        padding-top: 20px; margin: 20px 50px 20px 50px;">
+            <div style="width:400px; height:400px;background-color:gray;">House</div>
+        </div>
+
+        -----------------------------------------------------------------
+        <!-- Horizontal div -->
+        <!-- step 1:- Create an empty div
+            step 2:- put all the divs inside that
+            step 3:- give display:felx; on the parent-->
+        <div style="display:flex;">
+            <div style="width:200px;height:200px;border:1px solid red;"></div>
+            <div style="width:200px;height:200px;border:1px solid red;"></div>
+            <div style="width:200px;height:200px;border:1px solid red;"></div>
+        </div>
+
+        <div style="display:flex;">
+            <div style="width:200px;height:200px;border:1px solid red;"></div>
+            <div style="width:200px;height:200px;border:1px solid red;background-color:green; margin-left:10px; margin-right:10px;"></div>
+            <div style="width:200px;height:200px;border:1px solid red;"></div>
+        </div>
+</body>
+</html>

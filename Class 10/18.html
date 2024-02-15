@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click me</button>
+    <h1>I am Heading</h1>
+    
+</body>
+</html>
+
+<script>
+
+    
+
+    document.querySelector("button").addEventListener("click", myFunction)  //dont write onClick
+//whenever you add an event to any element, an additional event object will be formed which has some additional properties of event
+
+//where can we access event object?
+
+//access object in function parameter 
+
+    function myFunction(event){
+        console.log(event);
+    }
+
+    //click on button and result in console section
+
+    document.querySelector("h1").addEventListener("click", masaiSchool);
+    function masaiSchool(event){
+        console.log(event);
+    }
+    
+</script>

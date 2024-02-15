@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General sibling ~</title>
+    <style>
+        h1 ~ p {
+            /*select all p's which are genral(all)siblings of h1*/
+            background-color: red;
+        }
+
+        h2 ~ p {
+            background-color: blue;
+        }
+
+        p ~ h3 {
+            background-color: teal;
+        }
+
+        p ~ h6 {
+            background-color: orangered;
+        }
+
+        h2 ~ h4 ~ p {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>h1</h1>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <h3>h33</h3>
+    </div>
+
+    <div id="box">
+        <h2>h2</h2>
+        <h4>h4</h4>
+        <p>p4</p>
+        <p>p5</p>
+        <p>p6</p>
+        <h6>h6</h6>
+    </div>
+</body>
+</html>

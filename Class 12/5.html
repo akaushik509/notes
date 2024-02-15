@@ -1,0 +1,44 @@
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>local Storage</h1>
+    <p>Show name here</p>
+</body>
+</html>
+
+<script>
+    //setItem("keyName", "value")
+
+    localStorage.setItem("Student-1","avinash");
+    localStorage.setItem("Student-2","kaushik");
+    localStorage.setItem("Student-3","avi");
+    localStorage.setItem("Student-1-Mobile",9999999999);
+    localStorage.setItem("Student-2-Mobile",99999988889);
+
+    //TO display on screen
+
+    //use getItem()
+    //getItem("keyName")
+
+    //print name on display
+    let name = localStorage.getItem("Student-1");
+    console.log(name);
+
+    document.querySelector("p").innerText = name;
+
+    //whenever we try to access akey which is not present in storage it will return null
+    let name1 = localStorage.getItem("ldkafjgolah");
+    console.log(name1);
+
+    
+
+    
+</script>

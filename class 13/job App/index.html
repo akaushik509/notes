@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="applied.html">Applied Jobs</a></div>
+      <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+    <form action="" id="form">
+      <h2>Enter Your Application Details</h2>
+      <input placeholder="Enter Name" id="name" name="name" type="text" />
+      <input placeholder="Enter email" type="email" name="email" id="email" />
+      <select name="role" id="role">
+        <option value="FSD">FSD</option>
+        <option value="Backend">Backend</option>
+        <option value="Frontend">Frontend</option>
+      </select>
+      <input id="salary"
+        type="number"
+        placeholder="Enter expected salary in lakhs per annum "
+      />
+      <input id="submit" type="submit" name="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    //you need to code here
+
+    //1. code for getting all the values from input
+    document.querySelector("form").addEventListener("submit",myJobApp)
+
+    /*6.*/
+    //let jobArr=[]
+
+    /*15.*/
+    //let jobArr=JSON.parse(localStorage.getItem("jobData"));
+    //16. check your local storage after refresh data will not wipe out
+
+    //17. one more bug is here in our program that is ..when we dont have jobData local array key then jobArr will be null and we cant push null in array
+    let jobArr=JSON.parse(localStorage.getItem("jobData"))||[];
+
+    //18. now we can get our data in any other page where we want go to applied.html page
+
+    /*2.*/function myJobApp(event){
+      //3. to stop disapper after refresh
+      event.preventDefault();
+
+      //we will make object to store all data and to protect form overlapping we should use object inside array
+      /*4.*/
+      let jobObj={
+        personName:document.querySelector("#name").value,
+        personEmail:document.querySelector("#email").value,
+        personRole:document.querySelector("#role").value,
+        personSalary:document.querySelector("#salary").value,
+      };
+      /*5.*///by console we can see that our data is getting overwritten thats why we should make array of object
+      //console.log(jobObj);   pause after check
+
+      /*7.*///Now push objecty into array
+      jobArr.push(jobObj);
+      /*8.*/ //whith this we can check our data will not overwritten
+      //console.log(jobArr);  pause after check
+
+
+      /*9.*/ //if we want these data in another page then we should store this array with object into our local storage
+      
+
+      /*10.*/
+      localStorage.setItem("jobData",JSON.stringify(jobArr))
+      //localStorage.getItem("getjobData",JSON.parse("jobData")
+      //console.log()
+      /*11.*/// go top local storage and check after inserting data
+      //12. here is a bug after this and that bug is when ever we refresh our page then our data stored in local storage will deleted
+      //13. because in 6th step jobArr=[] means empty box thats why it wipe out all the data, so instead of empty arry we should insert local storage data inside the array
+      
+    }
+
+
+    
+  </script>
+</html>

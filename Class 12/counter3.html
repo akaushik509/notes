@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button>Increment</button>
+    <button>Decrement</button>
+</body>
+</html>
+
+<script>
+    //step -2 this will help to counter not ==  HERE IS A BUG IF I GIVE THIS VODE TO ANOTHER COMPUTER THEN IN THAT PC localCounter NOT AVAILABLE THEN NULL WILLL SHOW
+    //let counter=localStorage.getItem("localCounter");
+
+    let counter=  localStorage.getItem("localCounter")||0;
+    //SOLVIG BUG
+    
+  
+    document.querySelector("h1").innerText=counter;
+
+    document.querySelector("button").addEventListener("click",incFun);
+    document.querySelector("button+button").addEventListener("click",decFun);
+
+    function incFun(){
+        counter++;
+
+        document.querySelector("h1").innerText=counter;
+        //step -1 this will help to counter not ==0 after refresh page so first store coubnter value to local storgae
+        localStorage.setItem("localCounter",counter);
+
+    }
+
+    
+    function decFun(){
+        counter--;
+
+        document.querySelector("h1").innerText=counter;
+
+        localStorage.setItem("localCounter",counter);
+    
+    }
+
+
+    //if first condition is true it will ignore second condition
+    //if first condtion is false, it will checck for 2nd condtion and it woll print 2nd condition
+
+    //console.log(null||true); true
+    //console.log(true||null); true
+    //console.log(0||1); 1
+    //console.log(0||100); 100
+    //console.log(0||"avinash"); avinash
+    //console.log(1||"avinash"); 1
+    //console.log(null||0); 0
+    
+
+</script>

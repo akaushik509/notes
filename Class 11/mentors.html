@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(2,auto);
+            gap:20px;
+        }
+
+        h2+img{
+            width:120px;
+            height:150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+
+<script>
+
+    let mentors=[{image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/angad_ahuja_0eef27f35a.jpg",name:"Angad Ahuja",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cisco_rect_7d73d828a9.svg"},
+    {image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/angad_ahuja_0eef27f35a.jpg",name:"Angad Ahuja",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cisco_rect_7d73d828a9.svg"},
+    {image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/angad_ahuja_0eef27f35a.jpg",name:"Angad Ahuja",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cisco_rect_7d73d828a9.svg"},];
+
+    //for inserting div in div container
+    mentors.forEach(function(el){
+
+        //for Child Boxes
+        let box=document.createElement("div")
+        
+        //for creating image element
+        let avatar=document.createElement("img");
+        avatar.setAttribute("src",el.image);
+        //box.append(avatar);
+
+        //for creating h2
+        let mentorName=document.createElement("h2");
+        mentorName.innerText=el.name;
+        //box.append(avatar,mentorName); //order is important
+
+        //create image logo
+        let Clogo=document.createElement("img");
+        Clogo.setAttribute("src",el.logo)
+        box.append(avatar,mentorName,Clogo);
+
+        document.querySelector("#container").append(box);
+    })
+
+</script>
